@@ -1,0 +1,31 @@
+Package: neuromesh
+Type: Package
+Title: Neuroimaging Mesh Visualization for scimesh
+Version: 0.1.0
+Authors@R: c(
+    person("Tim", "Schaefer", email = "ts+code@rcmd.org",
+           role = c("aut", "cre"))
+    )
+Description: A neuroimaging layer on top of the scimesh software
+    renderer. Provides FreeSurfer-aware functions for loading brain
+    surface meshes, mapping morphometry data to vertex colours via
+    standard colormaps, cortex masking, anatomical camera views
+    (lateral, medial, dorsal, ventral, anterior, posterior), and
+    multi-view figure composition with colour bars.
+License: MIT + file LICENSE
+URL: https://github.com/dfsp-spirit/neuromesh
+BugReports: https://github.com/dfsp-spirit/neuromesh/issues
+Imports:
+    scimesh,
+    freesurferformats
+Suggests:
+    testthat (>= 3.0.0),
+    png,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+SystemRequirements: none
+Config/testthat/edition: 3
+Encoding: UTF-8
+NeedsCompilation: no
+RoxygenNote: 7.3.3

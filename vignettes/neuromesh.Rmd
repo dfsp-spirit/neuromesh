@@ -1,0 +1,33 @@
+---
+title: "Getting Started with neuromesh"
+author: "Tim Schaefer"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting Started with neuromesh}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Overview
+
+**neuromesh** is a neuroimaging layer on top of the scimesh software
+renderer. It provides FreeSurfer-aware functions for 3D brain surface
+visualisation.
+
+```r
+library(neuromesh)
+library(scimesh)
+
+img <- vis.subject.morph.native(
+    subjects_dir = "~/data/study1",
+    subject_id  = "subject1",
+    measure     = "sulc",
+    views       = "t4",
+    cortex_only = TRUE,
+    draw_colorbar = TRUE,
+    colorbar_title = "Sulcal depth [mm]"
+)
+
+scimesh::write_png(img, "brain_sulc_t4.png")
+```
