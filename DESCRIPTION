@@ -18,6 +18,9 @@ BugReports: https://github.com/dfsp-spirit/neuromesh/issues
 Imports:
     scimesh,
     freesurferformats
+Remotes:
+    dfsp-spirit/scimesh,
+    dfsp-spirit/freesurferformats
 Suggests:
     testthat (>= 3.0.0),
     png,
